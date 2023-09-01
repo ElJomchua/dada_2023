@@ -1,0 +1,27 @@
+def encontrar_menor_indice(arr):
+    menor_elemento = float('inf')  
+    menor_indice = -1 
+ 
+    for i in range(len(arr)):
+      
+        if arr[i] < menor_elemento:
+            menor_elemento = arr[i]  
+            menor_indice = i  
+    
+    return menor_indice  
+
+def main():
+
+    n = int(input("Ingrese el tamaño del arreglo: "))
+    
+    arreglo = []
+    for i in range(n):
+        elemento = int(input(f"Ingrese el elemento en la posición {i}: "))
+        arreglo.append(elemento)
+    
+    indice_menor = encontrar_menor_indice(arreglo)
+    
+    print(f"El menor elemento se encuentra en el índice: {indice_menor}")
+
+if __name__ == "__main__":
+    main()
